@@ -121,16 +121,17 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         //If someJobs is empty.
         if (someJobs.isEmpty()){
-            System.out.println("No Results");
+            System.out.print("No Results");
         } else {
         String spacer = "*****";
-        for (HashMap job: someJobs) {
-            System.out.println("\n" + spacer);
+        for (HashMap <String, String>  job: someJobs) {
+            System.out.print("\n" + spacer + "\n");
             job.forEach((key, value) -> {
-                System.out.println(key + ": " + value);
+                System.out.print(key.toString().trim() + ": " + value.toString().trim() + "\n");
             });
             System.out.println(spacer);
                 }
         }
     }
+
 }
