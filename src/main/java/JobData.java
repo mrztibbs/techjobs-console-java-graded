@@ -99,17 +99,13 @@ public class JobData {
 
         // TODO - implement this method
         ArrayList<HashMap<String, String>> columns = new ArrayList<>();
-        int round = 0;
-        do {
         for (HashMap <String, String>  row: allJobs) {
             row.forEach((aKey, aValue) -> {
-                if (aValue.toLowerCase().trim().equals(value.toLowerCase().trim())) {
+                if (aValue.toLowerCase().trim().contains(value.toLowerCase().trim())) {
                     columns.add(row);
                 }
             });
-                round = round + 1;
         }
-        }while (round < allJobs.size()) ;
         return columns;
     }
 
